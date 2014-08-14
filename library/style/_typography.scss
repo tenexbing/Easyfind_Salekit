@@ -1,0 +1,43 @@
+/**
+ * 	TYPOGRAPHY
+ * 	Sets up some sensible default typography.
+ * 	Fork from blueprint.
+ */
+// 
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/*  ==========================================================
+							GLOBAL 
+	========================================================== */
+
+html { font-size:16px; }
+
+body {
+  font-size: 100%;
+  color: #444;
+  background: #fff;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  padding: 0;
+  background-color: transparent;
+}
+
+*:focus {outline:0px none transparent;}
+
+
+
+
+/*  ==========================================================
+							HEADINGS 
+	========================================================== */
+
+h1,h2,h3,h4,h5,h6 { 
+	
+	font-weight: normal; 
+	color: #111;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; 
+
+}

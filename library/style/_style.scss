@@ -1,0 +1,516 @@
+@import "./resource/normalize";
+@import "./resource/rem";
+@import "./resource/retina";
+@import "mixin";
+@import "layout";
+@import "typography";
+
+body {
+	
+	@include fontMedium;
+
+	background: url('/web/images/bg.png') no-repeat center center fixed; 
+	background-size: cover; 
+	margin: 0;
+	padding: 0;
+
+}
+
+.page {
+
+	background-color: transparent;
+	margin: 0 auto;
+	padding: 0; 
+}
+
+.whiteBlk {
+
+	@include background-image(linear-gradient(white, #ededed));
+
+}
+
+/*  ==========================================================
+							CONTACTBLK
+	========================================================== */
+
+.contactBlk {
+
+	$iconW: $column-width * 0.5;
+
+	height: $column-width * 1;
+	margin-top: $gutter-width * 1;
+
+	a.twitter, a.email {
+
+		@include hide-text;	
+
+		background-repeat: no-repeat;
+		display: block;
+		float: right;
+		height: $iconW;
+		margin-left: $iconW;
+		width: $iconW;	
+
+	}
+
+	a.twitter {
+
+		@include at2x('/web/images/iconTwitter', $iconW, $iconW);
+
+	}
+
+	a.email {
+
+		@include at2x('/web/images/iconEmail',$iconW, $iconW);
+	}
+
+} //contactBlk
+
+/*  ==========================================================
+							HEADER 
+	========================================================== */
+
+header {
+
+	box-sizing: border-box;
+
+	h1 {
+		
+		$imgLogoW : 63px; 
+
+		@include at2x('/web/images/imgLogo', $imgLogoW, $imgLogoW);
+		@include rem(font-size, 54px);
+		background-repeat: no-repeat;
+
+		box-sizing: border-box;
+		color: $color01;
+		font-family:"Georgia",Helvetica Neue, Arial, Helvetica, sans-serif;
+		height: $imgLogoW;
+		margin: $gutter-width auto;
+		padding-left: $imgLogoW + $grid-margin;
+		width: 295px;
+
+		@include at-breakpoint ($pad) {
+			
+			margin-top: $imgLogoW * 2;
+		}
+	}
+
+	p {
+
+		@include fontLarge;
+
+		color: #777;
+		// font-family:"Georgia",Helvetica Neue, Arial, Helvetica, sans-serif;
+		line-height: 1.25em;
+		text-align: center;
+		width: 100%;
+	}
+	
+	a {
+
+		margin: 0 auto $gutter-width auto;
+		display: block;
+	}
+
+	a.appstore {
+
+		@include hide-text;
+		@include rem(height, 50px);
+		@include rem(width, 160px);
+
+		background: url('/web/images/imgAppStore.svg') no-repeat left center;
+	}
+
+	@include at-breakpoint ($pad) {
+
+		h1, p { text-align: left;}
+		h1 , a { margin-left: 0; }
+	
+	}
+
+} //header
+
+/*  ==========================================================
+							 BANNER 
+	========================================================== */
+
+.banner {
+
+	margin: 0 auto $gutter-width auto;
+	box-sizing: border-box;
+
+	.iPhone {
+
+		@include at2x('/web/images/iPhone' , 288px, 605px); 
+
+		box-sizing: border-box;
+		display: block;
+		height: 605px;
+		margin: 0 auto;
+		padding-top: 90px;
+		width: 288px;
+
+		@include at-breakpoint ($pad) {
+
+			float: right;
+			margin-right: $gutter-width;
+
+		}
+
+		#owl-carousel {
+
+			box-sizing: border-box;
+			display: block;
+			margin-left : 27px;
+			width: 237px;
+			
+			img {
+
+				height: 420px;
+				width: 237px;
+			}
+
+		} // #owl-carousel
+
+	} // .iPhone
+
+} //.banner
+
+
+/*  ==========================================================
+							 BLKMEDIA 
+	========================================================== */
+
+.blkMedia {
+
+	background-color: #ddd;
+	padding-bottom: 20px;
+	
+	blockquote {
+		font-family: Georgia, serif;
+	    width: 100%;
+	    margin: 0 0 0.25em 0;
+	    padding: 0 20px 0.25em 60px;
+	    line-height: 1.45;
+	    position: relative;
+	    color: #999999;
+	    box-sizing: border-box;
+	}
+
+	blockquote:before {
+	    display: block;
+	    content:"\201C";
+	    font-size: 80px;
+	    position: absolute;
+	    left: 20px;
+	    top: -20px;
+	    color: #7a7a7a;
+	}
+
+	blockquote cite {
+	    color: #999999;
+	    font-size: 14px;
+	    display: block;
+	    margin-top: 5px;
+	}
+
+	blockquote cite:before {
+	    content:"\2014 \2009";
+	}
+
+	.blkLifehacker, .blkAppPicker, .blkAppshout {
+
+		width: 100%;
+	} 
+
+	.blkAppPicker, .blkAppshout {
+
+		border-top: 1px solid darken(#ddd, 5%);
+	} 
+
+	a {
+
+		margin: $gutter-width auto ;
+		display: block;
+		float: none;
+		clear:both;
+		@include hide-text;
+		background-repeat: no-repeat;
+		background-position:  center center;
+	}
+
+	a.lifehacker {
+
+		@include at2x('/web/images/imgLifehacker', 126px, 62px);
+		@include rem(height, 62px);
+		@include rem(width, 126px);
+		background-size: 126px 62px;
+	}
+
+	a.appshout {
+
+		@include at2x('/web/images/imgAppshout', 134px, 62px);
+		@include hide-text;
+		@include rem(height, 62px);
+		@include rem(width, 134px);
+	}
+
+	a.appPicker {
+
+		@include at2x('/web/images/imgAppPicker', 178px, 62px);
+		@include hide-text;
+		@include rem(height, 62px);
+		@include rem(width, 178px);
+	}
+ 
+	@include at-breakpoint ($pad) {
+
+		.wrapMedia {
+
+			margin: 0 auto;
+			width: 100%;
+		} 
+
+		.blkLifehacker, .blkAppPicker, .blkAppshout {
+
+			width: 33%;
+			float: left;
+		}
+
+		.blkAppPicker, .blkAppshout {
+
+			border-top: 0px;
+		} 
+
+		blockquote {
+		    margin: 0 0 0.25em 0;
+		    padding: 0 00px 0.25em 60px;
+		}
+
+	}
+
+	@include at-breakpoint ($desktop) {
+
+		.wrapMedia {
+		
+			width: 80%;
+			margin: 0 auto;
+			float: none;
+			position:relative;
+			overflow: hidden;
+			display: block;
+
+		}
+
+		.blkLifehacker, .blkAppPicker, .blkAppshout {
+
+			width: 33%;
+			margin-right: 0;
+			float: left;
+		}
+
+	}			
+}
+
+
+/*  ==========================================================
+							 VIDEO 
+	========================================================== */
+
+.videoBlk {
+
+	padding: 3% 0;
+	box-sizing: border-box;
+
+	.videoWrap {
+
+		height: 0;
+		
+		height: 158px;
+		margin: 0 auto;
+		position: relative;
+		width: 280px;
+
+		iframe {
+
+			bottom: 0;
+			height: 100%;
+			left: 0; 
+			position: absolute;
+			right: 0; 	
+			top: 0; 
+			width: 100%;
+		}
+	}
+
+	@include at-breakpoint ($pad) {
+
+		.videoWrap {
+			
+			width: 640px;
+			height: 360px;
+		}
+
+	} // at-breakpoint ($pad)
+
+} // .videoBlk
+
+
+/*  ==========================================================
+							FLAG 
+	========================================================== */
+
+.flag {
+
+	$imgW: 48px;
+
+	background-color: rgba(darken($color01, 15%) , 0.4);
+	clear: both;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: $grid-margin 0;
+	position: relative;
+	width: 100%;
+
+	div {
+		
+		background-color: transparent;
+		box-sizing: border-box;
+		float: left;
+		padding-left: $grid-margin;
+		width: 100%;
+
+	}
+
+	.textBlk h5, .textBlk p {
+
+		color: #fff;
+		
+		text-align: center;
+	}
+	
+	.textBlk h5 {
+
+		@include fontLarge;
+		font-family:"Georgia",Helvetica Neue, Arial, Helvetica, sans-serif;
+		font-weight: normal;
+	}
+
+	.textBlk p {
+		
+		@include fontXSmall;
+
+		color: rgba(#fff, 0.4);
+		font-weight: normal;
+
+	}
+
+	.imgBlk {
+
+		text-align: center;
+	
+		img {
+
+			display: inline-block;
+			padding: 0 $grid-margin;
+			width: $imgW;
+			margin-top: $grid-margin;
+		}
+
+		img.comingSoon {
+
+			opacity: 0.35;
+		}
+		
+	} //imgBlk
+
+
+	@include at-breakpoint ($pad) {
+
+		.textBlk {
+
+			width: 40%;
+		}
+
+		.textBlk h5, .textBlk p { 
+
+			text-align: right; 
+		}
+		
+		.textBlk h5 {
+
+			margin-top: $grid-margin * 2;
+		}
+
+		.imgBlk{
+
+			margin-top: $grid-margin;
+			text-align: left;
+			width: 60%;
+
+			img {  
+
+				height: $imgW ; 
+				width: $imgW ; 
+				margin-top: 0;
+			}
+
+		} //imgBlk
+	
+	}// at-breakpoint ($pad)
+
+
+} //flag 
+
+
+/*  ==========================================================
+							FOTTER 
+	========================================================== */
+
+footer {
+
+	background-color: rgba(darken($color01, 45%) , 0.4);
+	padding-bottom: $grid-margin;
+	text-align: center;
+
+	p {
+
+		
+		@include fontXSmall;
+
+		color: $color02;
+		margin: $grid-margin auto;
+		width: 80%;
+	}
+
+	a.pressKit {
+
+		@include border-radius($grid-height/4);
+		@include fontXSmall;
+
+		background-color: rgba($color02, 0.7);
+		border: 1px solid rgba($color02, 0.7);
+		box-sizing: border-box;
+		color: rgba(#fff, 0.7);
+		display: inline-block;
+		height: $grid-height / 2;
+		line-height: $grid-height / 2;
+		padding: 0 $grid-margin ;
+		text-decoration: none;
+
+	} //a.pressKit
+
+} // footer
+
+
+
+
+
+
+
+
+
+
+
+

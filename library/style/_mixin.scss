@@ -1,0 +1,68 @@
+// ---------------------------------------------------
+/* Layout Grid Setting */
+
+$total-columns  : 12;
+$column-width   : 60px;
+$gutter-width   : 20px;
+$grid-padding   : 10px;
+
+$pad     : 768px 12;
+$desktop : 960px 12;
+
+// $show-grid-backgrounds  : true;
+$box-sizing: true;
+$rem: true;
+
+
+
+// ---------------------------------------------------
+/* Layout */
+
+main {
+	
+	@include container($total-columns, $pad, $desktop);
+	margin: 0 auto;
+	
+}
+
+
+
+// ---------------------------------------------------
+/* MY GRID SETTING */
+
+$grid-height: 44px;
+$grid-margin: 10px;
+
+
+
+// ---------------------------------------------------
+/* COLORs */
+
+$color01: #2c8094;
+$color02: #00bca9;
+
+
+
+// ---------------------------------------------------
+/* FONT SIZE */
+
+@mixin fontLarge { @include rem(font-size, 20px); }
+@mixin fontMedium { @include rem(font-size, 16px); }
+@mixin fontSmall { @include rem(font-size, 14px); }
+@mixin fontXLarge { @include rem(font-size, 28px); }
+@mixin fontXSmall { @include rem(font-size, 12px); }
+
+
+
+// ---------------------------------------------------------------------------
+/* HIDE TEXT */
+
+@mixin hide-text {
+
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+
+}
+
+

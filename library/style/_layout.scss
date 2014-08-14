@@ -1,0 +1,148 @@
+/*  ==========================================================
+							MEDIA PHONE 
+	========================================================== */
+
+.page {  
+	
+	// @include susy-grid-background;
+	
+}
+
+.whiteBlk {
+
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+main {
+	
+	@include container($total-columns, $pad, $desktop);
+}
+
+.contactBlk {
+
+	@include container($total-columns, $pad, $desktop);
+}
+
+header {
+
+	@include span-columns(12 ,12);
+}
+
+.banner {
+
+	@include span-columns(12 ,12);
+	clear: both;
+}
+
+.blkMedia {
+
+	@include span-columns(12 ,12);
+	clear: both;
+
+}
+
+.videoBlk {
+
+	@include span-columns(12 ,12);
+	clear: both;
+
+}
+footer {
+
+	@include span-columns(12 ,12);
+
+ }
+
+
+/*  ==========================================================
+							MEDIA PAD 
+	========================================================== */
+	
+@include at-breakpoint ($pad) {
+
+	.page {  
+	
+		// @include susy-grid-background;
+	
+	}
+
+	.whiteBlk {
+
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	main {
+	
+		@include container($total-columns, $pad, $desktop);
+		// @include susy-grid-background;
+
+	}
+
+	header {
+
+		@include span-columns(7 omega ,12); 
+	}
+ 
+	.banner {
+
+		@include span-columns(5 ,12);
+		clear: none;
+	}
+
+	footer {
+
+		@include span-columns(12 ,12);
+
+	 }
+
+}
+
+/*  ==========================================================
+						MEDIA DESKTOP
+	========================================================== */
+
+
+@include at-breakpoint ($desktop) {
+
+	.page {  
+	
+		// @include susy-grid-background;
+	
+	}
+
+	.whiteBlk {
+
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	main {
+	
+		// @include container($total-columns, $pad, $desktop);
+		// @include susy-grid-background;
+
+	}
+
+	header {
+
+		@include span-columns(7 omega ,12); 
+	}
+ 
+	.banner {
+
+		@include span-columns(5 ,12);
+		clear: none;
+	}
+
+	footer {
+
+		@include span-columns(12 ,12);
+
+	 }
+
+}
