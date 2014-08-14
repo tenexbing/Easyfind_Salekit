@@ -240,6 +240,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/照片 1.PNG": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 398337,
+		"inputAbbreviatedPath": "\/images\/照片 1.PNG",
+		"outputAbbreviatedPath": "\/images\/照片 1.PNG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/螢幕快照 2014-08-14 4.13.18 PM.png": {
 		"fileType": 32768,
 		"ignore": 0,
