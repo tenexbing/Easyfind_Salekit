@@ -4,11 +4,13 @@
 $total-columns  : 12;
 $column-width   : 60px;
 $gutter-width   : 20px;
-$grid-padding   : 10px;
+$grid-padding   : 10px; 
+
+$gap: 10px;
 
 $pad     : 768px 12;
 $desktop : 960px 12;
-
+ 
 // $show-grid-backgrounds  : true;
 $box-sizing: true;
 $rem: true;
@@ -51,6 +53,7 @@ $color02: #00bca9;
 @mixin fontSmall { @include rem(font-size, 14px); }
 @mixin fontXLarge { @include rem(font-size, 28px); }
 @mixin fontXSmall { @include rem(font-size, 12px); }
+@mixin fontHuge { @include rem(font-size, 32px); }
 
 
 

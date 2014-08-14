@@ -1,7 +1,9 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /* line 5, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -57,3 +59,1322 @@ a img {
 /* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, ../library/resource/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 19, ../library/resource/_normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 30, ../library/resource/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 50, ../library/resource/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 63, ../library/resource/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 73, ../library/resource/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 85, ../library/resource/_normalize.scss */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 93, ../library/resource/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 105, ../library/resource/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 113, ../library/resource/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 122, ../library/resource/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 131, ../library/resource/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 140, ../library/resource/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 149, ../library/resource/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 157, ../library/resource/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 165, ../library/resource/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 169, ../library/resource/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 180, ../library/resource/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 188, ../library/resource/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 199, ../library/resource/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 207, ../library/resource/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 217, ../library/resource/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 225, ../library/resource/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 248, ../library/resource/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+/* line 262, ../library/resource/_normalize.scss */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 273, ../library/resource/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 286, ../library/resource/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 298, ../library/resource/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 307, ../library/resource/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 318, ../library/resource/_normalize.scss */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 330, ../library/resource/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 342, ../library/resource/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 353, ../library/resource/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 366, ../library/resource/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 374, ../library/resource/_normalize.scss */
+body {
+  background-color: red; }
+
+/* line 375, ../library/resource/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 386, ../library/resource/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+/* line 395, ../library/resource/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 404, ../library/resource/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 415, ../library/resource/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 420, ../library/resource/_normalize.scss */
+td,
+th {
+  padding: 0; }
+
+/*
+ * a small mixin for easy use of rem with px as fallback
+ * usage: @include x-rem(font-size, 14px)
+ * usage: @include x-rem(marign, 0 12px 2 1.2)
+ * usage: @include x-rem(padding, 1.5 24px)
+ *
+ * thanks to Eric Meyer for https://github.com/ericam/susy
+ * and Hans Christian Reinl for http://drublic.de/blog/rem-fallback-sass-less/
+ */
+/* Layout Grid Setting */
+/* Layout */
+/* line 23, ../library/style/_mixin.scss */
+main {
+  *zoom: 1;
+  max-width: 940px;
+  max-width: 58.75rem;
+  _width: 940px;
+  padding-left: 10px;
+  padding-left: 0.625rem;
+  padding-right: 10px;
+  padding-right: 0.625rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto; }
+  /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+  main:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 768px) {
+    /* line 23, ../library/style/_mixin.scss */
+    main {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      main:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 960px) {
+    /* line 23, ../library/style/_mixin.scss */
+    main {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      main:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+/* MY GRID SETTING */
+/* COLORs */
+/* FONT SIZE */
+/* HIDE TEXT */
+/*  ==========================================================
+							MEDIA PHONE 
+	========================================================== */
+/* line 5, ../library/style/_layout.scss */
+html {
+  background: red;
+  padding: 0;
+  margin: 0; }
+
+/* line 11, ../library/style/_layout.scss */
+body {
+  background: black;
+  padding: 0;
+  margin: 0; }
+
+/* line 17, ../library/style/_layout.scss */
+.page {
+  background: #ffcc00;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%; }
+
+/* line 26, ../library/style/_layout.scss */
+section {
+  *zoom: 1;
+  max-width: 940px;
+  max-width: 58.75rem;
+  _width: 940px;
+  padding-left: 10px;
+  padding-left: 0.625rem;
+  padding-right: 10px;
+  padding-right: 0.625rem;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+  section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 768px) {
+    /* line 26, ../library/style/_layout.scss */
+    section {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      section:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 960px) {
+    /* line 26, ../library/style/_layout.scss */
+    section {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      section:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+/* line 31, ../library/style/_layout.scss */
+footer {
+  *zoom: 1;
+  max-width: 940px;
+  max-width: 58.75rem;
+  _width: 940px;
+  padding-left: 10px;
+  padding-left: 0.625rem;
+  padding-right: 10px;
+  padding-right: 0.625rem;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 768px) {
+    /* line 31, ../library/style/_layout.scss */
+    footer {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      footer:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 960px) {
+    /* line 31, ../library/style/_layout.scss */
+    footer {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      footer:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+/*  ==========================================================
+							MEDIA PAD 
+	========================================================== */
+@media (min-width: 768px) {
+  /* line 50, ../library/style/_layout.scss */
+  section {
+    *zoom: 1;
+    max-width: 940px;
+    max-width: 58.75rem;
+    padding-left: 10px;
+    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+    section:after {
+      content: "";
+      display: table;
+      clear: both; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    /* line 50, ../library/style/_layout.scss */
+    section {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      section:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 768px) and (min-width: 960px) {
+    /* line 50, ../library/style/_layout.scss */
+    section {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      section:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+@media (min-width: 768px) {
+  /* line 56, ../library/style/_layout.scss */
+  footer {
+    *zoom: 1;
+    max-width: 940px;
+    max-width: 58.75rem;
+    padding-left: 10px;
+    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+    footer:after {
+      content: "";
+      display: table;
+      clear: both; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    /* line 56, ../library/style/_layout.scss */
+    footer {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      footer:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 768px) and (min-width: 960px) {
+    /* line 56, ../library/style/_layout.scss */
+    footer {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      footer:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+/*  ==========================================================
+						MEDIA DESKTOP
+	========================================================== */
+@media (min-width: 960px) {
+  /* line 77, ../library/style/_layout.scss */
+  section {
+    *zoom: 1;
+    max-width: 940px;
+    max-width: 58.75rem;
+    padding-left: 10px;
+    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+    section:after {
+      content: "";
+      display: table;
+      clear: both; } }
+  @media (min-width: 960px) and (min-width: 768px) {
+    /* line 77, ../library/style/_layout.scss */
+    section {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      section:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 960px) and (min-width: 960px) {
+    /* line 77, ../library/style/_layout.scss */
+    section {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      section:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+@media (min-width: 960px) {
+  /* line 83, ../library/style/_layout.scss */
+  footer {
+    *zoom: 1;
+    max-width: 940px;
+    max-width: 58.75rem;
+    padding-left: 10px;
+    padding-left: 0.625rem;
+    padding-right: 10px;
+    padding-right: 0.625rem;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+    footer:after {
+      content: "";
+      display: table;
+      clear: both; } }
+  @media (min-width: 960px) and (min-width: 768px) {
+    /* line 83, ../library/style/_layout.scss */
+    footer {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      footer:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 960px) and (min-width: 960px) {
+    /* line 83, ../library/style/_layout.scss */
+    footer {
+      *zoom: 1;
+      max-width: 940px;
+      max-width: 58.75rem;
+      padding-left: 10px;
+      padding-left: 0.625rem;
+      padding-right: 10px;
+      padding-right: 0.625rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/utilities/general/_clearfix.scss */
+      footer:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
+/**
+ * 	TYPOGRAPHY
+ * 	Sets up some sensible default typography.
+ * 	Fork from blueprint.
+ */
+/*  ==========================================================
+							GLOBAL 
+	========================================================== */
+/* line 14, ../library/style/_typography.scss */
+html {
+  font-size: 16px; }
+
+/* line 16, ../library/style/_typography.scss */
+body {
+  font-size: 100%;
+  color: #444;
+  background: #fff;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  padding: 0;
+  background-color: transparent; }
+
+/* line 26, ../library/style/_typography.scss */
+*:focus {
+  outline: 0px none transparent; }
+
+/*  ==========================================================
+							HEADINGS 
+	========================================================== */
+/* line 35, ../library/style/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #111;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/* line 8, ../library/style/_style.scss */
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #888;
+  margin: 0;
+  padding: 0; }
+
+/* line 17, ../library/style/_style.scss */
+.page {
+  background-color: #f4f4f4;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden; }
+
+/* line 25, ../library/style/_style.scss */
+.header {
+  background-color: #de4f10;
+  overflow: hidden; }
+  /* line 30, ../library/style/_style.scss */
+  .header h1 {
+    background: url(../images/logoEasyFind.png) no-repeat center top;
+    width: 100%;
+    height: 85px;
+    margin: 10px auto;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent; }
+  /* line 39, ../library/style/_style.scss */
+  .header h2 {
+    color: #00c400;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 32px;
+    font-size: 2rem; }
+  /* line 47, ../library/style/_style.scss */
+  .header hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    margin: 20px 0; }
+  /* line 58, ../library/style/_style.scss */
+  .header ul {
+    list-style-type: dice;
+    margin: 20px auto;
+    width: 90%; }
+    /* line 64, ../library/style/_style.scss */
+    .header ul li {
+      line-height: 1.5em;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: bold;
+      text-align: left;
+      font-size: 14px;
+      font-size: 0.875rem;
+      margin-bottom: 10px; }
+  /* line 75, ../library/style/_style.scss */
+  .header img {
+    display: none; }
+  @media (min-width: 768px) {
+    /* line 25, ../library/style/_style.scss */
+    .header {
+      background: url(../images/bgHeader.png) no-repeat center center;
+      background-size: cover;
+      position: relative;
+      overflow: hidden; }
+      /* line 87, ../library/style/_style.scss */
+      .header h2 {
+        font-size: 44px;
+        color: #fff;
+        font-weight: bold; }
+      /* line 94, ../library/style/_style.scss */
+      .header ul {
+        width: 50%; }
+        /* line 98, ../library/style/_style.scss */
+        .header ul li {
+          text-align: center;
+          color: white; }
+      /* line 105, ../library/style/_style.scss */
+      .header img {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 300px; } }
+
+/* line 116, ../library/style/_style.scss */
+.s01 {
+  background: #00c600;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 122, ../library/style/_style.scss */
+  .s01 h3 {
+    background: url(../images/logoLINE.png) no-repeat center top;
+    width: 100%;
+    height: 37px;
+    margin: 20px;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent; }
+  /* line 136, ../library/style/_style.scss */
+  .s01 h4 {
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  /* line 145, ../library/style/_style.scss */
+  .s01 img {
+    width: 280px;
+    margin: 0 auto;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block; }
+  /* line 153, ../library/style/_style.scss */
+  .s01 hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 126, 0, 0.75), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 126, 0, 0.75), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 126, 0, 0.75), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 126, 0, 0.75), transparent);
+    margin: 20px 0; }
+  @media (min-width: 768px) {
+    /* line 166, ../library/style/_style.scss */
+    .s01 hr {
+      display: none; }
+    /* line 168, ../library/style/_style.scss */
+    .s01 div {
+      width: 45%;
+      height: 300px;
+      float: left;
+      margin-bottom: 20px; } }
+
+/* line 178, ../library/style/_style.scss */
+.s02 {
+  background: #00a4dd;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 184, ../library/style/_style.scss */
+  .s02 h3 {
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  /* line 193, ../library/style/_style.scss */
+  .s02 img {
+    width: 280px;
+    margin: 0 auto;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block; }
+  /* line 201, ../library/style/_style.scss */
+  .s02 hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    margin: 20px 0; }
+  @media (min-width: 768px) {
+    /* line 214, ../library/style/_style.scss */
+    .s02 h3 {
+      width: 50%;
+      float: left;
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 260px;
+      text-align: right; }
+    /* line 224, ../library/style/_style.scss */
+    .s02 img {
+      width: 25%;
+      float: left;
+      margin-top: 20px; } }
+
+/* line 233, ../library/style/_style.scss */
+.s03 {
+  background: #00c7be;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 239, ../library/style/_style.scss */
+  .s03 h3 {
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  /* line 248, ../library/style/_style.scss */
+  .s03 img {
+    width: 280px;
+    margin: 0 auto;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block; }
+  /* line 256, ../library/style/_style.scss */
+  .s03 hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    margin: 20px 0; }
+  @media (min-width: 768px) {
+    /* line 269, ../library/style/_style.scss */
+    .s03 h3 {
+      width: 50%;
+      float: left;
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 130px;
+      text-align: right; }
+    /* line 279, ../library/style/_style.scss */
+    .s03 img {
+      width: 25%;
+      float: left;
+      margin-top: 20px; } }
+
+/* line 288, ../library/style/_style.scss */
+.s04 {
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 294, ../library/style/_style.scss */
+  .s04 h3 {
+    color: #777;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  /* line 303, ../library/style/_style.scss */
+  .s04 img {
+    width: 280px;
+    margin: 0 auto;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block; }
+  @media (min-width: 768px) {
+    /* line 313, ../library/style/_style.scss */
+    .s04 h3 {
+      width: 50%;
+      float: left;
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 320px;
+      text-align: right; }
+    /* line 323, ../library/style/_style.scss */
+    .s04 img {
+      width: 25%;
+      float: left;
+      margin-top: 20px; } }
+
+/* line 332, ../library/style/_style.scss */
+.s05 {
+  background: #d5264c;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 338, ../library/style/_style.scss */
+  .s05 h3 {
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  /* line 347, ../library/style/_style.scss */
+  .s05 p {
+    width: 85%;
+    text-align: center;
+    line-height: 2em;
+    color: #fff;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-size: 0.875rem; }
+  /* line 358, ../library/style/_style.scss */
+  .s05 a {
+    display: block;
+    background-color: #8ad200;
+    text-align: center;
+    line-height: 44px;
+    text-decoration: none;
+    color: #fff;
+    height: 44px;
+    width: 95%;
+    margin: 0 auto;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-top: 10px; }
+  @media (min-width: 768px) {
+    /* line 377, ../library/style/_style.scss */
+    .s05 h3 {
+      font-size: 32px;
+      font-size: 2rem; }
+    /* line 383, ../library/style/_style.scss */
+    .s05 p {
+      width: 65%; }
+    /* line 388, ../library/style/_style.scss */
+    .s05 a {
+      width: 280px; } }
+
+/* line 396, ../library/style/_style.scss */
+.s06 {
+  background: #f77100;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  /* line 402, ../library/style/_style.scss */
+  .s06 h3 {
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-size: 32px;
+    font-size: 2rem; }
+  /* line 411, ../library/style/_style.scss */
+  .s06 h4 {
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  /* line 421, ../library/style/_style.scss */
+  .s06 img {
+    width: 280px;
+    margin: 0 auto;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block; }
+  /* line 429, ../library/style/_style.scss */
+  .s06 hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.25), transparent);
+    margin: 20px 0; }
+  /* line 440, ../library/style/_style.scss */
+  .s06 li:before {
+    content: '✔  ';
+    margin-left: -1em;
+    margin-right: .200em;
+    color: #16abe5;
+    line-height: 2em; }
+  /* line 449, ../library/style/_style.scss */
+  .s06 ul {
+    padding-left: 20px;
+    text-indent: 2px;
+    list-style: none;
+    list-style-position: outside; }
+    /* line 456, ../library/style/_style.scss */
+    .s06 ul li {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      font-size: 0.875rem; }
+  /* line 464, ../library/style/_style.scss */
+  .s06 p {
+    line-height: 1.5em;
+    text-align: center;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.7); }
+  @media (min-width: 768px) {
+    /* line 474, ../library/style/_style.scss */
+    .s06 ul {
+      list-style-type: dice;
+      margin: 20px auto;
+      width: 40%; }
+    /* line 481, ../library/style/_style.scss */
+    .s06 li {
+      line-height: 1.5em;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: bold;
+      text-align: left;
+      font-size: 14px;
+      font-size: 0.875rem;
+      margin-bottom: 10px; }
+    /* line 491, ../library/style/_style.scss */
+    .s06 hr {
+      display: none; }
+    /* line 493, ../library/style/_style.scss */
+    .s06 div {
+      margin-bottom: 20px;
+      width: 45%;
+      height: 470px;
+      float: left; } }
+
+/* line 503, ../library/style/_style.scss */
+footer {
+  background-color: #333333;
+  color: #fff; }
+  /* line 508, ../library/style/_style.scss */
+  footer div {
+    display: block;
+    overflow: hidden;
+    padding: 10px 0; }
+  /* line 515, ../library/style/_style.scss */
+  footer .store {
+    width: 240px;
+    margin: 0 auto; }
+    /* line 520, ../library/style/_style.scss */
+    footer .store a {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+      width: 110px;
+      height: 36px;
+      display: block;
+      margin: 0 10px 0 0;
+      float: left; }
+    /* line 530, ../library/style/_style.scss */
+    footer .store a.appStore {
+      background: url(../images/btnAppStore.png) no-repeat center center; }
+    /* line 536, ../library/style/_style.scss */
+    footer .store a.googlePlay {
+      background: url(../images/btnGooglePlay.png) no-repeat center center; }
+  /* line 542, ../library/style/_style.scss */
+  footer a {
+    color: #fff;
+    text-decoration: none; }
+  /* line 547, ../library/style/_style.scss */
+  footer .contact {
+    width: 178px;
+    margin: 0 auto; }
+    /* line 552, ../library/style/_style.scss */
+    footer .contact a {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+      width: 64px;
+      height: 64px;
+      display: block;
+      margin: 0 10px;
+      float: left; }
+    /* line 562, ../library/style/_style.scss */
+    footer .contact a.btnEmail {
+      background: url(../images/iconMail.png) no-repeat center center; }
+    /* line 568, ../library/style/_style.scss */
+    footer .contact a.btnFacebook {
+      background: url(../images/iconFB.png) no-repeat center center; }
+  /* line 576, ../library/style/_style.scss */
+  footer .copyright h5 {
+    color: #888;
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem; }
+  @media (min-width: 768px) {
+    /* line 586, ../library/style/_style.scss */
+    footer .store, footer .contact {
+      float: left;
+      width: 50%; }
+    /* line 592, ../library/style/_style.scss */
+    footer .store a {
+      float: right;
+      height: 64px; }
+    /* line 598, ../library/style/_style.scss */
+    footer .contact a {
+      float: left; }
+    /* line 603, ../library/style/_style.scss */
+    footer .copyright {
+      float: left;
+      width: 100%; } }

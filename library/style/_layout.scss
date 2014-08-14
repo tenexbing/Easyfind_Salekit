@@ -2,56 +2,35 @@
 							MEDIA PHONE 
 	========================================================== */
 
+html {
+
+	background: red;
+	padding:0;
+	margin:0;
+}
+body {
+
+	background: black;
+	padding:0;
+	margin:0;
+}
 .page {  
 	
 	// @include susy-grid-background;
-	
-}
-
-.whiteBlk {
-
+	background: #ffcc00;
+	margin: 0 auto;
+	padding: 0; 
 	width: 100%;
-	position: relative;
-	overflow: hidden;
 }
 
-main {
-	
-	@include container($total-columns, $pad, $desktop);
-}
-
-.contactBlk {
+section {
 
 	@include container($total-columns, $pad, $desktop);
 }
 
-header {
-
-	@include span-columns(12 ,12);
-}
-
-.banner {
-
-	@include span-columns(12 ,12);
-	clear: both;
-}
-
-.blkMedia {
-
-	@include span-columns(12 ,12);
-	clear: both;
-
-}
-
-.videoBlk {
-
-	@include span-columns(12 ,12);
-	clear: both;
-
-}
 footer {
 
-	@include span-columns(12 ,12);
+	@include container($total-columns, $pad, $desktop);
 
  }
 
@@ -67,35 +46,16 @@ footer {
 		// @include susy-grid-background;
 	
 	}
-
-	.whiteBlk {
-
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-	}
-
-	main {
 	
+	section  {
+
 		@include container($total-columns, $pad, $desktop);
-		// @include susy-grid-background;
 
-	}
-
-	header {
-
-		@include span-columns(7 omega ,12); 
-	}
- 
-	.banner {
-
-		@include span-columns(5 ,12);
-		clear: none;
-	}
+	 }
 
 	footer {
 
-		@include span-columns(12 ,12);
+		@include container($total-columns, $pad, $desktop);
 
 	 }
 
@@ -114,34 +74,15 @@ footer {
 	
 	}
 
-	.whiteBlk {
+	section  {
 
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-	}
+		@include container($total-columns, $pad, $desktop);
 
-	main {
-	
-		// @include container($total-columns, $pad, $desktop);
-		// @include susy-grid-background;
-
-	}
-
-	header {
-
-		@include span-columns(7 omega ,12); 
-	}
- 
-	.banner {
-
-		@include span-columns(5 ,12);
-		clear: none;
 	}
 
 	footer {
 
-		@include span-columns(12 ,12);
+		@include container($total-columns, $pad, $desktop);
 
 	 }
 
