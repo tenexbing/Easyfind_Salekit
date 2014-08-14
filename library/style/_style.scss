@@ -1,507 +1,618 @@
 @import "./resource/normalize";
 @import "./resource/rem";
-@import "./resource/retina";
-@import "mixin";
-@import "layout";
-@import "typography";
+// @import "./resource/retina";
+@import "./style/mixin";
+@import "./layout";
+@import "./typography";
 
 body {
 	
 	@include fontMedium;
-
-	background: url('/web/images/bg.png') no-repeat center center fixed; 
-	background-size: cover; 
+	color: #888;
 	margin: 0;
 	padding: 0;
-
+ 
 }
 
 .page {
 
-	background-color: transparent;
+	background-color: #f4f4f4;
 	margin: 0 auto;
 	padding: 0; 
+	overflow: hidden;
 }
 
-.whiteBlk {
+.header {
 
-	@include background-image(linear-gradient(white, #ededed));
-
-}
-
-/*  ==========================================================
-							CONTACTBLK
-	========================================================== */
-
-.contactBlk {
-
-	$iconW: $column-width * 0.5;
-
-	height: $column-width * 1;
-	margin-top: $gutter-width * 1;
-
-	a.twitter, a.email {
-
-		@include hide-text;	
-
-		background-repeat: no-repeat;
-		display: block;
-		float: right;
-		height: $iconW;
-		margin-left: $iconW;
-		width: $iconW;	
-
-	}
-
-	a.twitter {
-
-		@include at2x('/web/images/iconTwitter', $iconW, $iconW);
-
-	}
-
-	a.email {
-
-		@include at2x('/web/images/iconEmail',$iconW, $iconW);
-	}
-
-} //contactBlk
-
-/*  ==========================================================
-							HEADER 
-	========================================================== */
-
-header {
-
-	box-sizing: border-box;
+	background-color: #de4f10;
+	overflow: hidden;
 
 	h1 {
-		
-		$imgLogoW : 63px; 
 
-		@include at2x('/web/images/imgLogo', $imgLogoW, $imgLogoW);
-		@include rem(font-size, 54px);
-		background-repeat: no-repeat;
+		background: url(../images/logoEasyFind.png) no-repeat center top; 
+		width: 100%;
+		height: 85px;
+		margin: $gap auto;
+		@include hide-text; 
+	}
 
-		box-sizing: border-box;
-		color: $color01;
-		font-family:"Georgia",Helvetica Neue, Arial, Helvetica, sans-serif;
-		height: $imgLogoW;
-		margin: $gutter-width auto;
-		padding-left: $imgLogoW + $grid-margin;
-		width: 295px;
+	h2 {
 
-		@include at-breakpoint ($pad) {
-			
-			margin-top: $imgLogoW * 2;
+		color: #00c400;
+		text-align: center;
+		margin: $gap auto;
+		@include fontHuge;
+	}
+
+	hr {
+
+		border: 0;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+		margin: $gap * 2 0;
+	}
+
+	ul {
+
+		list-style-type: dice;
+		margin: $gap * 2 auto;
+		width: 90%;
+
+		li {
+
+			line-height: 1.5em;
+			color: rgba(#fff, 0.8);
+			font-weight: bold;
+			text-align: left;
+			@include fontSmall;
+			margin-bottom: $gap;
 		}
+	}
+
+	img {
+
+		display: none;
+	}
+
+	@include at-breakpoint ($pad) {
+		
+		background: url(../images/bgHeader.png) no-repeat center center; 
+		background-size: cover;
+		position: relative;
+		overflow: hidden; 
+
+		h2 {
+
+			font-size: 44px;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		ul {
+
+			width: 50%;
+
+			li {
+
+				text-align: center;
+				color: rgba(#fff, 1);
+			}
+		}
+
+		img {
+
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 300px; 
+		}
+	}
+}
+
+.s01 {
+
+	background: #00c600;
+	overflow: hidden;
+	padding-bottom: $gap*2;
+ 
+	h3 {
+
+  		background: url(../images/logoLINE.png) no-repeat center top;
+  		width: 100%;
+  		height: 37px;
+  		margin: $gap * 2;
+  		padding: 0; 
+  		display:block;
+  		box-sizing: border-box;
+		text-align: center;
+
+		@include hide-text; 
+	}
+
+	h4 {
+
+		color: #fff;
+		text-align: center;
+		margin: $gap * 2;
+		@include fontLarge;
+
+	}
+
+	img {
+
+		width: 280px;
+		margin: 0 auto;
+		@include border-radius(8px);
+		display: block; 
+	}
+
+	hr {
+
+		border: 0;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,126,0,0.75), rgba(0,0,0,0)); 
+	    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,126,0,0.75), rgba(0,0,0,0)); 
+	    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,126,0,0.75), rgba(0,0,0,0)); 
+	    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,126,0,0.75), rgba(0,0,0,0)); 
+		margin: $gap * 2 0;
+	}
+
+	@include at-breakpoint ($pad) {
+
+		hr { display: none;}
+
+		div {
+
+			width: 45%;
+			height: 300px;
+			float: left;
+			margin-bottom: $gap * 2;
+		}
+	}
+}
+
+.s02 {
+
+	background: #00a4dd;
+	overflow: hidden;
+	padding-bottom: $gap * 2;
+
+	h3 {
+
+		color: #fff;
+		text-align: center;
+		margin: $gap * 2;
+		@include fontLarge;
+
+	}
+
+	img {
+
+		width: 280px;
+		margin: 0 auto;
+		@include border-radius(8px);
+		display: block; 
+	}
+
+	hr {
+
+	border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	margin: $gap * 2 0;
+	}
+
+	@include at-breakpoint ($pad) {
+
+		h3 { 
+
+			width: 50%;
+			float: left;
+			@include fontHuge;
+			line-height: 260px;
+			text-align: right;
+
+		}
+
+		img {
+
+			width: 25%;
+			float: left;
+			margin-top: $gap * 2;
+		}
+	}
+}
+
+.s03 {
+
+	background: #00c7be;
+	overflow: hidden;
+	padding-bottom: $gap*2;
+
+	h3 {
+
+		color: #fff;
+		text-align: center;
+		margin: $gap * 2;
+		@include fontLarge;
+
+	}
+
+	img {
+
+		width: 280px;
+		margin: 0 auto;
+		@include border-radius(8px);
+		display: block; 
+	}
+
+	hr {
+
+		border: 0;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+		margin: $gap * 2 0;
+	}
+
+	@include at-breakpoint ($pad) {
+
+		h3 { 
+
+			width: 50%;
+			float: left;
+			@include fontHuge;
+			line-height: 130px;
+			text-align: right;
+
+		}
+
+		img {
+
+			width: 25%;
+			float: left;
+			margin-top: $gap * 2;
+		}
+	}
+}
+
+.s04 {
+
+	background: #fff;
+	overflow: hidden;
+	padding-bottom: $gap * 2;
+
+	h3 {
+
+		color: #777;
+		text-align: center;
+		margin: $gap;
+		@include fontLarge;
+
+	}
+
+	img {
+
+		width: 280px;
+		margin: 0 auto;
+		@include border-radius(8px);
+		display: block; 
+	}
+
+	@include at-breakpoint ($pad) {
+
+		h3 { 
+
+			width: 50%;
+			float: left;
+			@include fontHuge;
+			line-height: 320px;
+			text-align: right;
+
+		}
+
+		img {
+
+			width: 25%;
+			float: left;
+			margin-top: $gap * 2;
+		}
+	}
+}
+
+.s05 {
+
+	background: #d5264c;
+	overflow: hidden;
+	padding-bottom: $gap*2;
+
+	h3 {
+
+		color: #fff;
+		text-align: center;
+		margin: $gap;
+		@include fontLarge;
+
+	}
+
+	p {
+		
+		width: 85%;
+		text-align: center;
+		line-height: 2em;
+		color: #fff;
+		margin: 0 auto;
+		color: rgba(#fff, 0.7);
+		@include fontSmall;
+	}
+
+	a {
+
+		display: block;
+		background-color: #8ad200;
+		text-align: center;
+		line-height: 44px;
+		text-decoration: none;
+		color: #fff;
+		height: 44px;
+		width: 95%;
+		margin: 0 auto;
+		@include border-radius(8px);
+		@include fontLarge;
+		margin-top: $gap;
+		
+	}
+
+	@include at-breakpoint ($pad) {
+
+		h3 {
+
+			@include fontHuge;
+
+		}
+
+		p {
+
+			width: 65%;
+		}
+
+		a {
+			width: 280px;
+		}
+	}
+ 
+} 
+ 
+
+.s06 {
+
+	background: #f77100;
+	overflow: hidden;
+	padding-bottom: $gap*2;
+
+	h3 {
+
+		color: #fff;
+		text-align: center;
+		margin: $gap * 2;
+		@include fontHuge;
+
+	}
+ 
+	h4 {
+
+		color: #fff; 
+		text-align: center;
+		margin: $gap * 2;
+		@include fontLarge;
+
+	}
+
+
+	img {
+
+		width: 280px;
+		margin: 0 auto;
+		@include border-radius(8px);
+		display: block; 
+	}
+
+	hr {
+
+		border: 0;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+	    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+		margin: $gap * 2 0;
+	}
+
+	 li:before {
+
+	    content: '✔  ';   
+	    margin-left: -1em; 
+	    margin-right: .200em;
+	    color: #16abe5;
+	    line-height: 2em;
+	 }
+
+	ul {
+
+		padding-left:20px;
+		text-indent:2px;
+		list-style: none;
+		list-style-position:outside;
+
+		li {
+
+	   		color: rgba(#fff, 0.7);
+			@include fontSmall;
+
+	   }
 	}
 
 	p {
 
-		@include fontLarge;
-
-		color: #777;
-		// font-family:"Georgia",Helvetica Neue, Arial, Helvetica, sans-serif;
-		line-height: 1.25em;
+		line-height: 1.5em;
 		text-align: center;
-		width: 100%;
-	}
-	
-	a {
-
-		margin: 0 auto $gutter-width auto;
-		display: block;
-	}
-
-	a.appstore {
-
-		@include hide-text;
-		@include rem(height, 50px);
-		@include rem(width, 160px);
-
-		background: url('/web/images/imgAppStore.svg') no-repeat left center;
+		margin: $gap;
+		color: rgba(#fff, 0.7);
 	}
 
 	@include at-breakpoint ($pad) {
 
-		h1, p { text-align: left;}
-		h1 , a { margin-left: 0; }
-	
-	}
+		ul {
 
-} //header
-
-/*  ==========================================================
-							 BANNER 
-	========================================================== */
-
-.banner {
-
-	margin: 0 auto $gutter-width auto;
-	box-sizing: border-box;
-
-	.iPhone {
-
-		@include at2x('/web/images/iPhone' , 288px, 605px); 
-
-		box-sizing: border-box;
-		display: block;
-		height: 605px;
-		margin: 0 auto;
-		padding-top: 90px;
-		width: 288px;
-
-		@include at-breakpoint ($pad) {
-
-			float: right;
-			margin-right: $gutter-width;
-
-		}
-
-		#owl-carousel {
-
-			box-sizing: border-box;
-			display: block;
-			margin-left : 27px;
-			width: 237px;
-			
-			img {
-
-				height: 420px;
-				width: 237px;
-			}
-
-		} // #owl-carousel
-
-	} // .iPhone
-
-} //.banner
-
-
-/*  ==========================================================
-							 BLKMEDIA 
-	========================================================== */
-
-.blkMedia {
-
-	background-color: #ddd;
-	padding-bottom: 20px;
-	
-	blockquote {
-		font-family: Georgia, serif;
-	    width: 100%;
-	    margin: 0 0 0.25em 0;
-	    padding: 0 20px 0.25em 60px;
-	    line-height: 1.45;
-	    position: relative;
-	    color: #999999;
-	    box-sizing: border-box;
-	}
-
-	blockquote:before {
-	    display: block;
-	    content:"\201C";
-	    font-size: 80px;
-	    position: absolute;
-	    left: 20px;
-	    top: -20px;
-	    color: #7a7a7a;
-	}
-
-	blockquote cite {
-	    color: #999999;
-	    font-size: 14px;
-	    display: block;
-	    margin-top: 5px;
-	}
-
-	blockquote cite:before {
-	    content:"\2014 \2009";
-	}
-
-	.blkLifehacker, .blkAppPicker, .blkAppshout {
-
-		width: 100%;
-	} 
-
-	.blkAppPicker, .blkAppshout {
-
-		border-top: 1px solid darken(#ddd, 5%);
-	} 
-
-	a {
-
-		margin: $gutter-width auto ;
-		display: block;
-		float: none;
-		clear:both;
-		@include hide-text;
-		background-repeat: no-repeat;
-		background-position:  center center;
-	}
-
-	a.lifehacker {
-
-		@include at2x('/web/images/imgLifehacker', 126px, 62px);
-		@include rem(height, 62px);
-		@include rem(width, 126px);
-		background-size: 126px 62px;
-	}
-
-	a.appshout {
-
-		@include at2x('/web/images/imgAppshout', 134px, 62px);
-		@include hide-text;
-		@include rem(height, 62px);
-		@include rem(width, 134px);
-	}
-
-	a.appPicker {
-
-		@include at2x('/web/images/imgAppPicker', 178px, 62px);
-		@include hide-text;
-		@include rem(height, 62px);
-		@include rem(width, 178px);
-	}
- 
-	@include at-breakpoint ($pad) {
-
-		.wrapMedia {
-
-			margin: 0 auto;
-			width: 100%;
-		} 
-
-		.blkLifehacker, .blkAppPicker, .blkAppshout {
-
-			width: 33%;
-			float: left;
-		}
-
-		.blkAppPicker, .blkAppshout {
-
-			border-top: 0px;
-		} 
-
-		blockquote {
-		    margin: 0 0 0.25em 0;
-		    padding: 0 00px 0.25em 60px;
-		}
-
-	}
-
-	@include at-breakpoint ($desktop) {
-
-		.wrapMedia {
-		
-			width: 80%;
-			margin: 0 auto;
-			float: none;
-			position:relative;
-			overflow: hidden;
-			display: block;
-
-		}
-
-		.blkLifehacker, .blkAppPicker, .blkAppshout {
-
-			width: 33%;
-			margin-right: 0;
-			float: left;
-		}
-
-	}			
-}
-
-
-/*  ==========================================================
-							 VIDEO 
-	========================================================== */
-
-.videoBlk {
-
-	padding: 3% 0;
-	box-sizing: border-box;
-
-	.videoWrap {
-
-		height: 0;
-		
-		height: 158px;
-		margin: 0 auto;
-		position: relative;
-		width: 280px;
-
-		iframe {
-
-			bottom: 0;
-			height: 100%;
-			left: 0; 
-			position: absolute;
-			right: 0; 	
-			top: 0; 
-			width: 100%;
-		}
-	}
-
-	@include at-breakpoint ($pad) {
-
-		.videoWrap {
-			
-			width: 640px;
-			height: 360px;
-		}
-
-	} // at-breakpoint ($pad)
-
-} // .videoBlk
-
-
-/*  ==========================================================
-							FLAG 
-	========================================================== */
-
-.flag {
-
-	$imgW: 48px;
-
-	background-color: rgba(darken($color01, 15%) , 0.4);
-	clear: both;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: $grid-margin 0;
-	position: relative;
-	width: 100%;
-
-	div {
-		
-		background-color: transparent;
-		box-sizing: border-box;
-		float: left;
-		padding-left: $grid-margin;
-		width: 100%;
-
-	}
-
-	.textBlk h5, .textBlk p {
-
-		color: #fff;
-		
-		text-align: center;
-	}
-	
-	.textBlk h5 {
-
-		@include fontLarge;
-		font-family:"Georgia",Helvetica Neue, Arial, Helvetica, sans-serif;
-		font-weight: normal;
-	}
-
-	.textBlk p {
-		
-		@include fontXSmall;
-
-		color: rgba(#fff, 0.4);
-		font-weight: normal;
-
-	}
-
-	.imgBlk {
-
-		text-align: center;
-	
-		img {
-
-			display: inline-block;
-			padding: 0 $grid-margin;
-			width: $imgW;
-			margin-top: $grid-margin;
-		}
-
-		img.comingSoon {
-
-			opacity: 0.35;
-		}
-		
-	} //imgBlk
-
-
-	@include at-breakpoint ($pad) {
-
-		.textBlk {
-
+			list-style-type: dice;
+			margin: $gap * 2 auto;
 			width: 40%;
 		}
 
-		.textBlk h5, .textBlk p { 
+		li {
 
-			text-align: right; 
-		}
-		
-		.textBlk h5 {
-
-			margin-top: $grid-margin * 2;
-		}
-
-		.imgBlk{
-
-			margin-top: $grid-margin;
+			line-height: 1.5em;
+			color: rgba(#fff, 0.6);
+			font-weight: bold;
 			text-align: left;
-			width: 60%;
+			@include fontSmall;
+			margin-bottom: $gap;
+		}
 
-			img {  
+		hr { display: none;}
 
-				height: $imgW ; 
-				width: $imgW ; 
-				margin-top: 0;
-			}
+		div {
 
-		} //imgBlk
-	
-	}// at-breakpoint ($pad)
-
-
-} //flag 
-
-
-/*  ==========================================================
-							FOTTER 
-	========================================================== */
+			margin-bottom: $gap * 2;
+			width: 45%;
+			height: 470px;
+			float: left;
+		}	
+	}
+}
 
 footer {
 
-	background-color: rgba(darken($color01, 45%) , 0.4);
-	padding-bottom: $grid-margin;
-	text-align: center;
+	background-color: #333333;
+	color: #fff;
 
-	p {
+	div {
 
-		
-		@include fontXSmall;
-
-		color: $color02;
-		margin: $grid-margin auto;
-		width: 80%;
+		display: block;
+		overflow: hidden;
+		padding: $gap 0;
 	}
 
-	a.pressKit {
+	.store {
 
-		@include border-radius($grid-height/4);
-		@include fontXSmall;
+		width: (110px * 2 ) + ($gap * 2);
+		margin: 0 auto;
 
-		background-color: rgba($color02, 0.7);
-		border: 1px solid rgba($color02, 0.7);
-		box-sizing: border-box;
-		color: rgba(#fff, 0.7);
-		display: inline-block;
-		height: $grid-height / 2;
-		line-height: $grid-height / 2;
-		padding: 0 $grid-margin ;
+		a {
+
+			@include hide-text;
+			width: 110px;
+			height: 36px;
+  			display: block;
+  			margin: 0 $gap 0 0;
+			float: left;
+		}
+
+		a.appStore {
+
+		  	background: url(../images/btnAppStore.png) no-repeat center center;
+  			
+		}
+
+		a.googlePlay {
+
+			background: url(../images/btnGooglePlay.png) no-repeat center center;
+		}
+	}
+
+	a {
+		color: #fff;
 		text-decoration: none;
+	}
 
-	} //a.pressKit
+	.contact {
+	
+		width: (64px * 2 ) + ($gap * 5);
+		margin: 0 auto;
 
-} // footer
+		a {
+
+			@include hide-text;
+			width: 64px;
+			height: 64px;
+  			display: block;
+  			margin: 0 $gap;
+			float: left;
+		} 
+
+		a.btnEmail {
+
+		  	background: url(../images/iconMail.png) no-repeat center center;
+  			
+		}
+
+		a.btnFacebook {
+
+			background: url(../images/iconFB.png) no-repeat center center;
+		}
+	}
+
+	.copyright {
+
+		h5 { 
+
+			color: #888;
+			text-align: center;
+			@include fontSmall;
+		}
+	}
+
+	@include at-breakpoint ($pad) {
+
+		.store, .contact {
+
+			float: left;
+			width: 50%;
+		}
+
+		.store a {
+
+			float: right;
+			height: 64px;
+		}
+
+		.contact a {
+
+			float: left;
+		}
+
+		.copyright {
+
+			float: left;
+			width: 100%;
+		}
+
+	}
+}
+
+
+
+
+
 
 
 
